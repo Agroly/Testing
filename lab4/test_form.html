@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Тестовая форма</title>
+<style>
+  #success { display: none; color: green; }
+  #error { display: none; color: red; }
+</style>
+</head>
+<body>
+
+<h2>Тестовая форма</h2>
+
+<form id="myForm">
+  <input type="text" id="field1" placeholder="Поле 1"><br>
+  <input type="text" id="field2" placeholder="Поле 2"><br>
+  <input type="text" id="field3" placeholder="Поле 3"><br>
+  <input type="text" id="field4" placeholder="Поле 4"><br>
+  <input type="text" id="field5" placeholder="Поле 5"><br>
+  <button type="button" id="submitBtn">Отправить</button>
+</form>
+
+<div id="success">Спасибо! Форма отправлена.</div>
+<div id="error">Ошибка: заполните все обязательные поля.</div>
+
+<script>
+document.getElementById("submitBtn").addEventListener("click", function() {
+    const fields = [
+        document.getElementById("field1").value,
+        document.getElementById("field2").value,
+        document.getElementById("field3").value,
+        document.getElementById("field4").value,
+        document.getElementById("field5").value
+    ];
+
+    const hasEmpty = fields.some(f => f.trim() === "");
+
+    if (hasEmpty) {
+        document.getElementById("error").style.display = "block";
+        document.getElementById("success").style.display = "none";
+    } else {
+        document.getElementById("error").style.display = "none";
+        document.getElementById("success").style.display = "block";
+    }
+});
+</script>
+
+</body>
+</html>
