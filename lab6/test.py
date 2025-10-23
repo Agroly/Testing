@@ -9,7 +9,7 @@ def calc():
 @pytest.mark.parametrize(
     "a,b,expected",
     [
-        (1, 2, 3),
+        (1, 3, 4),
         (-1, 5, 4),
         (0, 0, 0),
         (2.5, 3.5, 6.0),
