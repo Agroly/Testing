@@ -26,4 +26,4 @@ jobs:
 
       - name: Run only lab6 test
         run: pytest -v lab6/test.py
-      
+

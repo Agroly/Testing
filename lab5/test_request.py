@@ -19,7 +19,7 @@ def test_get_user():
     assert data["email"] == "janet.weaver@reqres.in"
     assert data["first_name"] == "Janet"
     assert data["last_name"] == "Weaver"
-
+#
 
 def test_create_user():
     """Проверка создания пользователя"""
