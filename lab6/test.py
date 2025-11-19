@@ -20,6 +20,7 @@ def test_add(calc, a, b, expected):
     assert calc.add(a, b) == expected
 
 
+
 @pytest.mark.parametrize(
     "a,b,expected,expect_exception",
     [
